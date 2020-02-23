@@ -1,10 +1,13 @@
+
+var count = 0;
+
 /**
- * Metoda na�te a slou�� dva textov� �e�ce z libovoln�ch dvou prvk� jednozna�n� definovan�ch pomoc� ID v html dokumentu, a n�sledn� v�sledkem p�ep�e op�t jednozna�n� definovan� prvek v html.
+ * Metoda načte a sloučí dva textové řetězce z libovolných dvou prvků jednoznačně definovaných pomocí ID v html dokumentu, a následně výsledkem p�ep�e op�t jednozna�n� definovan� prvek v html.
  * 
  * 
- * @param {string} cil = cilovy label na vypis slu�en� textu
- * @param {string} jmeno = textBox (input) kam u�ivatel zad�v� sv� jm�no
- * @param {string} prijmeni = textBox (input) kam u�ivatel zad�v� sv� prijmeni
+ * @param {string} cil = cilovy label na vypis slučený textu
+ * @param {string} jmeno = textBox (input) kam uživatel zadává své jméno
+ * @param {string} prijmeni = textBox (input) kam uživatel zadává své prijmeni
  * @param {number} id = id tlačítka pr odefinicy jaká osoba se má zobrazit
  */
 
@@ -23,29 +26,40 @@ function vypisJmeno(cil,jmeno,prijmeni,id) {
 
 //----------------------------------------------------------------------------
 
+
+/**
+ * Metodapři každé změně v texh boxu @input zvaliduje zda se jedná o číslednou hodnotu následně "viditelní" tlačítko @button pro hráče
+ * 
+ * @param {*} input = input text box s uživatelskýmy hodnotami
+ * @param {*} button = Id buttonu pro změnu barvy (Visibiliti)
+ */
 function zadavani(input, button){
 
-if( !isNaN(document.getElementById(input).value.trim()) ){
+if( !isNaN(document.getElementById(input).value.trim()) && document.getElementById(input).value.trim() != ""){
 
-    document.getElementById(button).style.backgroundColor = '#868181';
+    document.getElementById(button).style.backgroundColor = '#868181'; //normal
     return true;
 
 }
 else{
 
-    document.getElementById(button).style.backgroundColor = '#b9b9b9';
+    document.getElementById(button).style.backgroundColor = '#b9b9b9'; //hover
     return false;
 }
 
 
 
-//alert("Neco");
-
 }
 
-function zadat(){
 
-    
+function zadat(label, button, divZadavani, divHra){
+
+debugger
+    if(zadavani(label, button.id)){
+        document.getElementById(divZadavani).style.visibility = "hidden";
+        document.getElementById(divHra).style.visibility = "visible";
+
+    }
 
 }
 
@@ -63,9 +77,45 @@ function tipCheck(){
 
 }
 
-function hover(button){
+/**
+ * Zástupná metoda pro hover 
+ * @param {Object} x = pointer na objekt
+ */
+function hover(x){
 
-    document.getElementById(button).style.backgroundColor = '#b9b9b9';
+    x.style.backgroundColor = '#b9b9b9';
+
+}
+
+
+/**
+ * Metoda slouží jako ukončení hoveru pro tlačítka, ovšem nejprve vyhodnotí zda se má tlačítko opravdu graficky vrátit to clickable stavu pomocí metody zadavani.
+ * Metoda se také volá při naštení stránky a provede první nastavení grafiky pro všechny tlačítka jejichž id se zadá jako vstupní parametr do argumentu na idexy 2 a více.
+ * 
+ * @param {Object} x pointer na objekt tlačítka
+ * @param {String} input = id příšlušného textBoxu pro ověření hodnoty
+ * @argument {String} argument = na pozici 2 - inf se zjišťují id budttonu 
+ */
+function hoverEnd(x, input){
+
+    if(x!= null){
+        if(zadavani(input, x.id))
+            x.style.backgroundColor = '#868181';
+    }
+    else
+    {
+        for (var i = 2; i < arguments.length; i++) {
+            document.getElementById(arguments[i]).style.backgroundColor = '#b9b9b9'; //hover
+        } 
+
+    }
+
+}
+
+
+function load(){
+
+    hoverEnd(null, 'intVstup', 'b1', 'b2' );
 
 }
 

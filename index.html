@@ -8,7 +8,7 @@
 
 
 
-<body>
+<body onload="load()">
 
     <noscript>
         Pro plné fungování obsahu stránky je nezbytné, aby byl v prohlížeči povolen JavaScript. Pod následujícím <a href=https://www.enable-javascript.com/ target="_blank"> odkazem </a> naleznete instrukce k povolení JavaScriptu v prohlížeči.
@@ -51,7 +51,7 @@
         <label id="info1">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
         <input id="intVstup" onchange="zadavani('intVstup','b1' )">
         <br/>
-        <button class="button" id="b1" onmouseup="hover('b1')"  onclick="zadat('labelVysledek', 'a', 'b', 'math')">Zadat</button>
+        <button class="button" id="b1" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstup')"  onclick="zadat('intVstup', this, 'zadavani', 'hra')">Zadat</button>
 
         </div>
 
@@ -60,7 +60,7 @@
             <label id="info2">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
             <input id="intVstup" onchange="tip()">
             <br />
-            <button class="button" id="b2" onmouseup="hover('b2')" onclick="tipCheck('labelVysledek', 'a', 'b', 'math')">Tipnout</button>
+            <button class="button" id="b2" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstup' )"  onclick="tipCheck('labelVysledek', 'a', 'b', 'math')">Tipnout</button>
     
             </div>
 
