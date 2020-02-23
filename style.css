@@ -1,1 +1,17 @@
-﻿
+﻿body{
+
+    text-align: center;
+
+}
+
+table {
+    box-align: center;
+    border-spacing: 0.5rem;
+    border: outset;
+  }
+  
+  td {
+    padding: 0.5rem;
+    border-bottom: inset;
+    text-align: center;
+  }

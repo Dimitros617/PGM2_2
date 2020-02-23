@@ -2,13 +2,12 @@
 <head lang="cs">
     <meta http-equiv="Content-language" content="cs" charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 </head>
 
 
 
 
-<body onload="load()">
+<body onload="zmena('5')">
 
     <noscript>
         Pro plné fungování obsahu stránky je nezbytné, aby byl v prohlížeči povolen JavaScript. Pod následujícím <a href=https://www.enable-javascript.com/ target="_blank"> odkazem </a> naleznete instrukce k povolení JavaScriptu v prohlížeči.
@@ -16,8 +15,22 @@
     </noscript>
     <script src="script.js" charset="utf-8"></script>
 
+    <br>
+    <br>
 
+        <h1>Generování tabulky</h1>
+       
+    <br>
 
+        <input type="number" id="number" min="1" max="10" value="5" oninput="zmena(this.value)">
+    <br>
+        <input type="range" id="range"   min="1" max="10" value="5" oninput="zmena(this.value)">
+
+    <br>
+    <br>
+
+    <table id="tabulka" align="center">
+    </table>
 
 
 
