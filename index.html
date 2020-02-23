@@ -1,0 +1,78 @@
+<html>
+<head lang="cs">
+    <meta http-equiv="Content-language" content="cs" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
+
+
+
+<body>
+
+    <noscript>
+        Pro plné fungování obsahu stránky je nezbytné, aby byl v prohlížeči povolen JavaScript. Pod následujícím <a href=https://www.enable-javascript.com/ target="_blank"> odkazem </a> naleznete instrukce k povolení JavaScriptu v prohlížeči.
+    
+    </noscript>
+    <script src="script.js" charset="utf-8"></script>
+
+
+    <div class="box" id="first">
+        <H1> Můj první program objektově</H1>
+
+        <div>
+            <label id="labelJmeno">Jméno: </label>
+            <label id="labelPrijmeni"> Příjmení:</label>
+
+            <br>
+
+            <input id="inputJmeno">
+            <input id="inputPrijmeni">
+        </div>
+            <br />
+            <button class="button" onclick="vypisJmeno('labelSloucene','inputJmeno','inputPrijmeni','0')">Přidat osobu</button>
+            <button class="button" onclick="vypisJmeno('labelSloucene','inputJmeno','inputPrijmeni','1')">Zobraz osobu</button>
+
+            <br>
+        
+
+        <div id="slouceneJmeno">
+            <label id="labelSloucene"><b> Zde se objevi vase cele jmeno:</b></label>
+            <br>
+            <hr>
+        </div>
+    </div>
+
+    <div class="box">
+        <H1> HRA hádání čísel</H1>
+        <br />
+
+        <div id="zadavani">
+        <label id="info1">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
+        <input id="intVstup" onchange="zadavani('intVstup','b1' )">
+        <br/>
+        <button class="button" id="b1" onmouseup="hover('b1')"  onclick="zadat('labelVysledek', 'a', 'b', 'math')">Zadat</button>
+
+        </div>
+
+
+        <div id="hra">
+            <label id="info2">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
+            <input id="intVstup" onchange="tip()">
+            <br />
+            <button class="button" id="b2" onmouseup="hover('b2')" onclick="tipCheck('labelVysledek', 'a', 'b', 'math')">Tipnout</button>
+    
+            </div>
+
+
+        <br />
+        <br><br>
+        <label id="labelVysledek"><b> Výsledek</b></label>
+        <hr />
+
+    </div>
+
+
+</body>
+
+</html>

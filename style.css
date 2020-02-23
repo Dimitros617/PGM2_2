@@ -1,0 +1,79 @@
+﻿
+body {
+	background-image: url('https://www.nicepng.com/png/full/817-8174403_white-texture-hd-backgrounds-5-transparent-monochrome.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-family: 'Century Gothic';
+
+}
+#labelPrijmeni {
+	padding-left: 118px;
+}
+
+
+#slouceneJmeno {
+	margin: 40px 0vw 0vw 0vw;
+	text-align: center;
+}
+
+#labelB {
+	padding-left: 181px;
+}
+
+#first {
+	margin-top: 7vw;
+}
+
+.box {
+	text-align: center;
+	background-color: white;
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 11px 11px rgba(0, 0, 0, 0.2), 0 0 34px rgba(0, 0, 0, 0.1) inset;
+	margin: 3vw 33vw 3vw 33vw;
+	padding: 2vw;
+	width: 450px;
+}
+
+
+
+	.box:after {
+		right: 10px;
+		left: auto;
+		-webkit-transform: skew(8deg) rotate(3deg);
+		-moz-transform: skew(8deg) rotate(3deg);
+		-ms-transform: skew(8deg) rotate(3deg);
+		-o-transform: skew(8deg) rotate(3deg);
+		transform: skew(8deg) rotate(3deg);
+	}
+
+
+.button {
+	background: #868181;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 10px;
+	cursor: pointer;
+	box-shadow: 0 5px 11px rgba(0, 0, 0, 0.2), 0 0 34px rgba(0, 0, 0, 0.1) inset;
+}
+
+	#b1:hover, #b2:hover, .button:hover {
+		background: #b9b9b9;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+
+
