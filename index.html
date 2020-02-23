@@ -17,59 +17,11 @@
     <script src="script.js" charset="utf-8"></script>
 
 
-    <div class="box" id="first">
-        <H1> Můj první program objektově</H1>
-
-        <div>
-            <label id="labelJmeno">Jméno: </label>
-            <label id="labelPrijmeni"> Příjmení:</label>
-
-            <br>
-
-            <input id="inputJmeno">
-            <input id="inputPrijmeni">
-        </div>
-            <br />
-            <button class="button" onclick="vypisJmeno('labelSloucene','inputJmeno','inputPrijmeni','0')">Přidat osobu</button>
-            <button class="button" onclick="vypisJmeno('labelSloucene','inputJmeno','inputPrijmeni','1')">Zobraz osobu</button>
-
-            <br>
-        
-
-        <div id="slouceneJmeno">
-            <label id="labelSloucene"><b> Zde se objevi vase cele jmeno:</b></label>
-            <br>
-            <hr>
-        </div>
-    </div>
-
-    <div class="box">
-        <H1> HRA hádání čísel</H1>
-        <br />
-
-        <div id="zadavani">
-        <label id="info1">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
-        <input id="intVstup" onchange="zadavani('intVstup','b1' )">
-        <br/><br />
-        <button class="button" id="b1" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstup')"  onclick="zadat('intVstup','info2', this, 'zadavani', 'hra')">Zadat</button>
-
-        </div>
 
 
-        <div id="hra">
-            <label id="info2">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
-            <input id="intVstupHra" onchange="zadavani('intVstupHra','b2' )">
-            <br /><br />
-            <button class="button" id="b2" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstupHra' )"  onclick="tipCheck('intVstupHra', this, 'labelVysledek')">Tipnout</button>
-            </div>
 
 
-        <br />
-        <br><br>
-        <label id="labelVysledek"><b> </b></label>
-        <hr />
 
-    </div>
 
 
 </body>
