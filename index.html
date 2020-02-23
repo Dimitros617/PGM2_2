@@ -50,24 +50,23 @@
         <div id="zadavani">
         <label id="info1">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
         <input id="intVstup" onchange="zadavani('intVstup','b1' )">
-        <br/>
-        <button class="button" id="b1" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstup')"  onclick="zadat('intVstup', this, 'zadavani', 'hra')">Zadat</button>
+        <br/><br />
+        <button class="button" id="b1" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstup')"  onclick="zadat('intVstup','info2', this, 'zadavani', 'hra')">Zadat</button>
 
         </div>
 
 
         <div id="hra">
             <label id="info2">Zadejte max. hodnotu rozsahu, ze kterého budete hádat </label>
-            <input id="intVstup" onchange="tip()">
-            <br />
-            <button class="button" id="b2" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstup' )"  onclick="tipCheck('labelVysledek', 'a', 'b', 'math')">Tipnout</button>
-    
+            <input id="intVstupHra" onchange="zadavani('intVstupHra','b2' )">
+            <br /><br />
+            <button class="button" id="b2" onmouseover="hover(this)" onmouseout="hoverEnd(this,'intVstupHra' )"  onclick="tipCheck('intVstupHra', this, 'labelVysledek')">Tipnout</button>
             </div>
 
 
         <br />
         <br><br>
-        <label id="labelVysledek"><b> Výsledek</b></label>
+        <label id="labelVysledek"><b> </b></label>
         <hr />
 
     </div>
