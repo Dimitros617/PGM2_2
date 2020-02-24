@@ -2,38 +2,77 @@
 <head lang="cs">
     <meta http-equiv="Content-language" content="cs" charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 </head>
 
 
 
-
-<body onload="zmena('5')">
+<body onload="load()">
 
     <noscript>
         Pro plné fungování obsahu stránky je nezbytné, aby byl v prohlížeči povolen JavaScript. Pod následujícím <a href=https://www.enable-javascript.com/ target="_blank"> odkazem </a> naleznete instrukce k povolení JavaScriptu v prohlížeči.
     
     </noscript>
     <script src="script.js" charset="utf-8"></script>
-    <script src="Tabulka.js" charset="utf-8"></script>
     <script src="Nastaveni.js" charset="utf-8"></script>
-    <script src="poleASCII.js" charset="utf-8"></script>
 
-    <br>
-    <br>
 
-        <h1>Generování tabulky</h1>
+    <div id="element" class="editor" >
+        <div id="hlavicka">
+            <h1>EDITOR</h1>
+            <p id="check" title="Označení synchronizace změn provedené v editoru a zobrazené v náhledu">&#10006;</p> <!-- nebo &#10004 -->
+        </div>
+
+        <div class="selecthor">
+        
+        <select  oninput="zmenaKomponentu(this)">
+            <option value="0">
+              Vyberte komponentu ZDE
+            </option>
+            <option value="1" >
+              Textový vstup
+            </option>
+            <option value="2" >
+              Textová oblast
+            </option>
+            <option value="3" >
+              Rozevírací seznam
+            </option>
+            <option value="4" >
+              Číselný vstup
+            </option>
+            <option value="5" >
+              Číselný posuvník
+            </option>
+            <option value="6" >
+              Tlačítko
+            </option>
+          </select>
+        </div>
+
+        <div id="nastaveni">
+            
+
+        </div>
+    </div>
+
+    <div id="preview" class="preview">
+        <h1>NÁHLED</h1>
+        <div id="nahled" align="center"></div>
+    </div>
+
+    <div id="css" class="css">
+        <h1>CSS</h1>
+        <div id="code"></div>
+    </div>
+
+
+        
        
-    <br>
 
-        <input type="number" id="number" min="1" max="10" value="5" oninput="zmena(this.value)">
-    <br>
-        <input type="range" id="range"   min="1" max="10" value="5" oninput="zmena(this.value)">
 
-    <br>
-    <br>
 
-    <div id="divTabulka" align="center"></div>
-    <div id="divSelect" align="center"></div>
+
 
 
 
