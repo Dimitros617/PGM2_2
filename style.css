@@ -6,15 +6,42 @@
 
 table {
     box-align: center;
-    border-spacing: 0.5rem;
-    border: outset;
+    border-collapse: collapse;
+
+    width: 30%;
+    height: 50%;
   }
   
   td {
-    padding: 0.5rem;
-    border-bottom: inset;
     text-align: center;
 
     width: 40px;
     height: 50px;
   }
+
+  td#bunka:hover {
+    background-color: #d7dadb;
+  }
+
+  td#horizontalHead {
+    border: 1px solid;
+    background-color: goldenrod;
+
+}
+
+td#verticalHead {
+  border: 1px solid;
+  background-color: bisque;
+}
+
+td#bunka {
+  border: 1px solid;
+}
+
+div#divSelect {
+  margin-top: 1vw;
+}
+
+
+
+

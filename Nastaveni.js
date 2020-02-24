@@ -7,9 +7,9 @@ class Nastaveni {
      * @param {number} krok 
      */
     constructor(min, max, krok) {
- /*        this.min = min;
+         this.min = min;
         this.max = max;
-        this.krok = krok; */
+        this.krok = krok; 
     }
 
     synchronize(hodnota) {
