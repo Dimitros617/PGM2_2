@@ -39,10 +39,12 @@ function stopResize(e) {
 
 
 
+
 function zmenaKomponentu(x) {
 
     try {
         document.getElementById('previewItem').parentNode.removeChild(document.getElementById('previewItem'));
+        document.getElementById('localNastaveni').parentNode.removeChild(document.getElementById('localNastaveni'));
     } catch (error) { }
 
     this.previewKomponenta = vytvorKomponentu(parseInt(x.value));
@@ -50,8 +52,14 @@ function zmenaKomponentu(x) {
 
     document.getElementById('nahled').appendChild(this.previewKomponenta);
 
+    this.nastaveni = new Nastaveni(this.previewKomponenta, x.value);
+
 }
 
+/**
+ * 
+ * @param {number} num = id komponenty z hlavního seznamu
+ */
 function vytvorKomponentu(num) {
 
     switch (num) {

@@ -45,7 +45,8 @@ div#hlavicka {
 
 div#nastaveni {
   float: left;
-  width: 90%;
+  width: 84%;
+  margin: 42px;
 }
 
 p{
@@ -109,3 +110,34 @@ div#nahled {
   vertical-align: middle;
 
 }
+
+
+
+div#graphicHorizontal {
+  margin: 10px 0;
+  height: 40px;
+}
+
+div#graphicHorizontal label {
+  font-size: 20px;
+  font-family: 'Comfortaa';
+  margin-right: 24px;
+  color: #aaaead;
+  float: left;
+  padding-top: 11px;
+}
+
+
+div#graphicHorizontal input {
+
+  width: 59%;
+  height: 31px;
+  background: #3a3a3a;
+  border: none;
+  color: #bfbfbf;
+  font-size: 20px;
+  font-family: 'Comfortaa';
+  padding: 20px;
+  float: right;
+}
+
