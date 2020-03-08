@@ -99,3 +99,21 @@ function vytvorKomponentu(num) {
 
 
 }
+
+function enterElement(x){
+
+    document.getElementById("check").textContent = "✖";
+
+
+}
+
+function leaveElement(x){
+
+    let t = x.target;
+    document.getElementById("check").textContent = "✔";
+    document.getElementById("previewItem").style.setProperty(t.name, t.value.toLowerCase().replace(' ', ''));
+
+
+}
+
+

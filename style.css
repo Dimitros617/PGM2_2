@@ -11,6 +11,18 @@ h1 {
   color: #aaaead;
 }
 
+h2 {
+  font-family: 'Comfortaa';
+    color: #aaaead;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #292929;
+    background: #292929;
+    padding: 42px 30px 30px 30px;
+    width: 103%;
+    margin: -20px 0px 21px -24px;
+    box-shadow: 10px 10px 5px #00000021;
+}
+
 .editor {
 
   background-color: #1a1b1f;
@@ -31,7 +43,7 @@ h1 {
 
 .css{
 
-  background-color: #1e1f26;
+  background-color: #151515;
   float: left;
     width: 66%;
     height: 66%;
@@ -45,8 +57,8 @@ div#hlavicka {
 
 div#nastaveni {
   float: left;
-  width: 84%;
-  margin: 42px;
+  width: 88%;
+  margin: 42px 28px;
 }
 
 p{
@@ -90,6 +102,7 @@ animation: mymove 5s infinite;
   -webkit-appearance: none;
   outline: none;
   font-family: 'Comfortaa';
+  box-shadow: 10px 10px 5px #00000021;
 }
 
 .selecthor select:hover{
@@ -116,6 +129,8 @@ div#nahled {
 div#graphicHorizontal {
   margin: 10px 0;
   height: 40px;
+  width: 100%;
+  float: left;
 }
 
 div#graphicHorizontal label {
@@ -140,4 +155,60 @@ div#graphicHorizontal input {
   padding: 20px;
   float: right;
 }
+
+
+div#graphicVertical {
+  margin: 10px 10px;
+  height: 66px;
+  width: 200px;
+  float: left;
+}
+
+div#graphicVertical label {
+  font-size: 20px;
+  font-family: 'Comfortaa';
+  color: #aaaead;
+  margin: 11px 0px;
+}
+
+
+div#graphicVertical input {
+  width: 100%;
+  height: 31px;
+  background: #3a3a3a;
+  border: none;
+  color: #bfbfbf;
+  font-size: 20px;
+  font-family: 'Comfortaa';
+  padding: 20px;
+  margin-top: 6px;
+}
+
+
+
+div#divBox {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  background: #151515;
+  padding: 17px;
+  border-radius: 16px;
+  margin: 25px 0px;
+  box-shadow: 0px 4px 11px #0c0c0ce8; 
+}
+
+div#localNastaveni {
+  overflow-y: scroll;
+  max-height: 72%;
+  border-radius: 16px;
+  -ms-overflow-style: none;
+}
+
+div#localNastaveni::-webkit-scrollbar {
+    display: none;
+}
+
+div#divBox::-webkit-scrollbar {
+  display: none;
+}
+
 

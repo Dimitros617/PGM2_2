@@ -7,6 +7,7 @@ class Nastaveni {
 
     item; // Object
     id; //int
+    component // Object
 
     constructor(item, id) {
         this.item = item;
@@ -19,47 +20,16 @@ class Nastaveni {
 
     vytvorNastaveni(id){
 
+        this.component = new Component(this.id);
         let div = document.createElement("div");
         div.setAttribute("ID", "localNastaveni");
+        
+        div.appendChild(this.component.getRozmery());
+        div.appendChild(this.component.getHodnoty());
+        div.appendChild(this.component.getBarva());
         document.getElementById('nastaveni').appendChild(div);
-        document.getElementById('localNastaveni').appendChild(this.getRozmery());
-
 
     }
-
-    getRozmery(){
-
-        var div = document.createElement("div");
-        div.setAttribute("ID", "divBox");
-        div.appendChild(this.getGraphic("První hodnota :", "input", position.HORIZONTAL));
-        div.appendChild(this.getGraphic("Test 2 :", "input", position.HORIZONTAL));
-        div.appendChild(this.getGraphic("Test 3 :", "input", position.HORIZONTAL));
-
-
-
-        return div;
-    }
-
-    getGraphic(textLabel, inputType, position){
-
-
-        let div = document.createElement("div");
-        div.setAttribute("ID", position == 0? "graphicVertical" : "graphicHorizontal");
-        let label = document.createElement("label");
-        label.textContent = textLabel;
-        div.appendChild(label);
-        let input = document.createElement(inputType);
-        input.textContent = textLabel;
-        div.appendChild(input);
-
-        return div;
-
-
-
-
-    }
-
-
 
     /**
      * 
