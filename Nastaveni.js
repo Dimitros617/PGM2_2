@@ -27,6 +27,8 @@ class Nastaveni {
         div.appendChild(this.component.getRozmery());
         div.appendChild(this.component.getHodnoty());
         div.appendChild(this.component.getBarva());
+        div.appendChild(this.component.getMargin());
+        div.appendChild(this.component.getPadding());
         document.getElementById('nastaveni').appendChild(div);
 
     }

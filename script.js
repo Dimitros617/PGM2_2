@@ -1,3 +1,4 @@
+//document.getElementsByTagName(“head”)[0].innerHTML += “<style>.block:hover{color:green;}</style>”;
 
 var previewKomponenta;
 var nastaveni;
@@ -110,9 +111,35 @@ function enterElement(x){
 function leaveElement(x){
 
     let t = x.target;
-    document.getElementById("check").textContent = "✔";
-    document.getElementById("previewItem").style.setProperty(t.name, t.value.toLowerCase().replace(' ', ''));
+    let type = t.name.split("/")[0];
+    let style = t.name.split("/")[1];
+    
+    if(type == "s"){
 
+        document.getElementById("previewItem").style.setProperty(style, t.value.toLowerCase().replace(' ', ''));
+
+    }
+    else if(type == "f"){
+
+        document.getElementById("previewItem").setAttribute(style, t.value.toLowerCase().replace(' ', ''));
+
+    }
+    else{
+
+        document.getElementById("previewItem").onmouseover = function()
+        {
+            this.setAttribute("slot", document.getElementById("previewItem").style.getPropertyValue(style));
+            this.style.setProperty(style, t.value.toLowerCase());
+        }
+
+        document.getElementById("previewItem").onmouseout = function()
+        {
+            this.style.setProperty(style, this.slot);
+        }
+
+    }
+
+    document.getElementById("check").textContent = "✔";
 
 }
 

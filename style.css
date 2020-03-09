@@ -47,6 +47,7 @@ h2 {
   float: left;
     width: 66%;
     height: 66%;
+    border-radius: 0px 16px 16px 0px;
 
 }
 
@@ -73,7 +74,7 @@ p{
 }
 
 
-@media screen and (max-width: 750px)   {
+@media screen and (max-width: 730px)   {
   .editor, .preview, .css{
       width:100%;   
       float:none;
@@ -115,6 +116,7 @@ animation: mymove 5s infinite;
   display: inline-block;
   margin-top: 10%;
   margin-left: -100px;
+  border: solid;
 }
 
 div#nahled {
