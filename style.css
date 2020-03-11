@@ -38,15 +38,15 @@ h2 {
   background-color: white;
   float: left;
   width: 66%;
-  height: 30%;
+  height: 60%;
 }
 
-.css{
+.code{
 
   background-color: #151515;
   float: left;
     width: 66%;
-    height: 66%;
+    height: 30%;
     border-radius: 0px 16px 16px 0px;
 
 }
@@ -73,9 +73,23 @@ p{
   color: #424242;
 }
 
+div#html {
+  width: 80%;
+  height: 80%;
+  margin-left: 3vw;
+}
+
+p#htmlCode {
+  float: left;
+  color: #aaaead;
+  font-size: 120%;
+  font-family: 'Source Code Pro', monospace;
+  margin: 2px 0px;
+}
+
 
 @media screen and (max-width: 730px)   {
-  .editor, .preview, .css{
+  .editor, .preview, .code{
       width:100%;   
       float:none;
   }
@@ -114,7 +128,7 @@ animation: mymove 5s infinite;
 
 #previewItem {
   display: inline-block;
-  margin-top: 10%;
+  margin-top: 20%;
   margin-left: -100px;
   border: solid;
 }

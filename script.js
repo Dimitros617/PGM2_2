@@ -1,4 +1,4 @@
-//document.getElementsByTagName(“head”)[0].innerHTML += “<style>.block:hover{color:green;}</style>”;
+
 
 var previewKomponenta;
 var nastaveni;
@@ -13,6 +13,7 @@ function load() {
     this.resizer.style.background = '#aaaead';
     this.resizer.style.float = 'right';
     this.resizer.style.marginTop = '-164px';
+    this.resizer.style.marginLeft = '-50px';
     this.resizer.style.cursor = 'e-resize';
     this.element.appendChild(this.resizer);
     resizer.addEventListener('mousedown', initResize, false);
@@ -28,8 +29,8 @@ function Resize(e) {
         this.element.style.width = (e.clientX - this.element.offsetLeft) + 'px';
         document.getElementById('preview').style.width = (window.innerWidth - (e.clientX - this.element.offsetLeft) - 100) + 'px';
         document.getElementById('preview').style.float = 'left';
-        document.getElementById('css').style.width = (window.innerWidth - (e.clientX - this.element.offsetLeft) - 100) + 'px';
-        document.getElementById('css').style.float = 'left';
+        document.getElementById('code').style.width = (window.innerWidth - (e.clientX - this.element.offsetLeft) - 100) + 'px';
+        document.getElementById('code').style.float = 'left';
     }
 
 }
@@ -140,6 +141,7 @@ function leaveElement(x){
     }
 
     document.getElementById("check").textContent = "✔";
+    document.getElementById("htmlCode").textContent = document.getElementById("previewItem").outerHTML;
 
 }
 
