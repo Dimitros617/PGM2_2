@@ -3,6 +3,14 @@ body {
   margin: 0;
 }
 
+hr {
+  border: 1px solid #424242;
+  border-radius: 5px;
+  margin: 30px 0px;
+  float: left;
+  width: 100%;
+}
+
 h1 {
   float: left;
   font-family: 'Comfortaa';
@@ -28,6 +36,7 @@ h2 {
   float: left;
   width: 30%;
   height: 100%;
+  overflow: hidden;
 }
 
 .preview {
@@ -51,9 +60,10 @@ div#hlavicka {
 }
 
 div#nastaveni {
-  float: left;
   width: 88%;
-  margin: 42px 28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
 p {
@@ -184,7 +194,7 @@ div#divBox {
 
 div#localNastaveni {
   overflow-y: scroll;
-  max-height: 72%;
+  max-height: 78%;
   border-radius: 16px;
   -ms-overflow-style: none;
 }
@@ -205,8 +215,21 @@ p#copyright {
   font-size: 11px;
 }
 
+.resizer{
 
-@media screen and (max-width: 730px) {
+
+  width: 5px;
+    height: 250%;
+    background: rgb(170, 174, 173);
+    float: right;
+    margin-top: -200%;
+    margin-left: 23px;
+    cursor: e-resize;
+
+}
+
+
+@media screen and (max-width: 1360px) {
   .editor, .preview {
     width: 100%;
     float: none;

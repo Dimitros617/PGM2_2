@@ -42,8 +42,8 @@ class Nastaveni {
     id; //int
     component // Object
 
-    constructor(item, id) {
-        this.item = item;
+    constructor(id) {
+
         this.id = id;
 
         this.vytvorNastaveni(id);
@@ -53,21 +53,19 @@ class Nastaveni {
 
     vytvorNastaveni(id) {
 
-
-        this.component = new Component(editComponent.getOnIndex(this.id));
         let div = document.createElement("div");
         div.setAttribute("ID", "localNastaveni");
 
 
         let componentSetting = [];
-        componentSetting.push(this.component.getRozmery());
-        componentSetting.push(this.component.getHodnoty());
-        componentSetting.push(this.component.getBarva());
-        componentSetting.push(this.component.getMargin());
-        componentSetting.push(this.component.getPadding());
+        componentSetting.push(new Rozmery(editComponent.getOnIndex(this.id), this.id));
+        componentSetting.push(new Hodnoty(editComponent.getOnIndex(this.id), this.id));
+        componentSetting.push(new Barva(editComponent.getOnIndex(this.id), this.id));
+        componentSetting.push(new Margin(editComponent.getOnIndex(this.id), this.id));
+        componentSetting.push(new Padding(editComponent.getOnIndex(this.id), this.id));
 
-        for (let i = 0; i < componentSetting.length; i++) 
-            if(componentSetting[i] != null)
+        for (let i = 0; i < componentSetting.length; i++)
+            if (componentSetting[i] != null)
                 div.appendChild(componentSetting[i]);
 
 
@@ -83,4 +81,7 @@ class Nastaveni {
     synchronize(newStyle) {
         document.getElementById('previewItem').style = newStyle;
     }
+
+
+
 }
